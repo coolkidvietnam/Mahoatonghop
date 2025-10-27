@@ -6,7 +6,7 @@ local Window = Rayfield:CreateWindow({
    ConfigurationSaving = {Enabled = false}
 })
 
-local Tab1 = Window:CreateTab("Menu Chính", 4483362458)
+local Tab1 = Window:CreateTab("buff", 4483362458)
 Tab1:CreateButton({
    Name = "Fly",
    Callback = function()
@@ -21,7 +21,7 @@ Tab1:CreateButton({
 })
 Tab1:CreateInput({
    Name = "Nhập tốc độ chạy (vĩnh viễn)",
-   PlaceholderText = "Ví dụ: 50",
+   PlaceholderText = "tốc độ bây giờ 16",
    RemoveTextAfterFocusLost = false,
    Callback = function(value)
        local speed = tonumber(value)
@@ -49,7 +49,7 @@ Tab1:CreateInput({
    end
 })
 Tab1:CreateButton({
-   Name = "Fix Lag",
+   Name = "Fix Lag+ nhìn trong bóng tối",
    Callback = function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/coolkidvietnam/Fix-lag/refs/heads/main/C00LKID2K25"))()
    end
@@ -81,7 +81,7 @@ Tab1:CreateButton({
 
 local Tab2 = Window:CreateTab("OP", 7743873524)
 Tab2:CreateButton({
-   Name = "Dupe item đang cầm (Thử nhiều cách)",
+   Name = "Dupe vip",
    Callback = function()
        local Players = game:GetService("Players")
        local plr = Players.LocalPlayer
@@ -104,7 +104,7 @@ Tab2:CreateButton({
            end
        end
        if not tool then
-           notify("Dupe", "Không tìm thấy item đang cầm.", 3)
+           notify("Dupe", "cầm item đi kìa thằng ngu.", 3)
            return
        end
        local name = tool.Name
@@ -148,14 +148,14 @@ Tab2:CreateButton({
            if countInBackpack() > before then success = true end
        end) end
        if success then
-           notify("Dupe", "Đã thử dupe, kiểm tra Backpack.", 4)
+           notify("Dupe", dupe thành công.", 4)
        else
-           notify("Dupe", "Không thể dupe trong game này.", 4)
+           notify("Dupe", "dupe thất bại.", 4)
        end
    end
 })
 Tab2:CreateButton({
-   Name = "FE (OP)",
+   Name = "FE (OP) idk map ",
    Callback = function()
        loadstring(game:HttpGet("https://gist.github.com/someunknowndude/38cecea5be9d75cb743eac8b1eaf6758/raw"))()
    end
